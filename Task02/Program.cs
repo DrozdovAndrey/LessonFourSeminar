@@ -16,7 +16,25 @@ namespace GB
             PrintArray(array);
 
 
-            void FillArray(int[] col)
+            // void FillArray(int[] col)   // так все тоже работает
+            // {
+            //     for (int i = 0; i < col.Length; i++)
+            //     {
+            //         col[i] = new Random().Next(0,2);
+            //     }
+            // }
+
+            // void PrintArray (int[] col)
+            // {
+            //     for (int i = 0; i < col.Length; i++)
+            //     {
+            //         Console.WriteLine(col[i]);
+            //     }
+            // }
+           
+           
+        } 
+        static void FillArray(int[] col)  //без static не работает, без public все работает, видимо по умолчанию стоит public
             {
                 for (int i = 0; i < col.Length; i++)
                 {
@@ -24,15 +42,12 @@ namespace GB
                 }
             }
 
-            void PrintArray (int[] col)
+        static void PrintArray (int[] col)   // c private тоже все работает
             {
                 for (int i = 0; i < col.Length; i++)
                 {
                     Console.WriteLine(col[i]);
                 }
-            }
-           
-           
-        }  
+            } 
     }
 }
